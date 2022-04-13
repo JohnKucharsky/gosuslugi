@@ -57,7 +57,7 @@ const Feed = () => {
         </div>
         <div className="feed__side--payments">
           <img src="./images/barcode.svg" alt="" />
-          <p>Плптежи по квитанции</p>
+          <p>Платежи по квитанции</p>
         </div>
       </div>
     </div>
