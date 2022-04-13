@@ -67,6 +67,9 @@
     &--item {
       padding: 1rem;
       cursor: pointer;
+      @include md {
+        padding: 0.5rem 1rem;
+      }
       &:hover {
         background-color: $home-background;
         color: $blue-button-hover;
