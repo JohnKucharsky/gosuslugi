@@ -1,0 +1,107 @@
+@use "../../sass/" as *;
+.login {
+  background: rgb(228, 236, 253);
+  padding: 4rem 0;
+  height: 100vh;
+  &__main {
+    margin: 0 auto;
+    position: relative;
+    max-width: 384px;
+    &--container {
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+      padding: 1.6rem;
+      border-radius: 12px;
+      background-color: #fff;
+      img {
+        margin: 1rem auto;
+        width: 200px;
+      }
+    }
+    button {
+      width: 100%;
+      margin: 1rem 0 2rem 0;
+      border: none;
+      background-color: $blue-button;
+      color: #fff;
+      font-size: 1rem;
+      border-radius: 8px;
+      padding: 1rem 0;
+      transition: all 0.2s linear;
+      &:hover {
+        background-color: $blue-button-hover;
+      }
+    }
+    &--input {
+      position: relative;
+      label {
+        position: absolute;
+        color: $label-color;
+        font-size: 0.7rem;
+        top: 0.3rem;
+        left: 0.6rem;
+      }
+      input {
+        width: 100%;
+        padding: 1.5rem 1rem 0.7rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background-color: rgb(228, 236, 253);
+        outline: none;
+        border-radius: 8px;
+      }
+      p {
+        margin-top: 0.3rem;
+        color: $blue-button;
+        cursor: pointer;
+        &:hover {
+          color: $blue-button-hover;
+        }
+      }
+    }
+    &--bottomtext {
+      text-align: center;
+      cursor: pointer;
+      color: $blue-button;
+      &:hover {
+        color: $blue-button-hover;
+      }
+    }
+    &--reg {
+      text-align: center;
+      margin-top: 1rem;
+      color: $blue-button;
+      cursor: pointer;
+      &:hover {
+        color: $blue-button-hover;
+      }
+    }
+    &--side {
+      width: 280px;
+      padding: 2rem;
+      background-color: #fff;
+      border-radius: 12px;
+      margin: 0;
+      position: absolute;
+      top: 0;
+      left: 420px;
+      line-height: 2rem;
+      color: $blue-button;
+      cursor: pointer;
+      &:hover {
+        color: $blue-button-hover;
+      }
+      @include xl {
+        width: 384px;
+        position: static;
+        margin: 2rem auto;
+      }
+      img {
+        margin-bottom: 1rem;
+        width: 48px;
+        height: 48px;
+      }
+    }
+  }
+}

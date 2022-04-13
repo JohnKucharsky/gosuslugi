@@ -1,0 +1,187 @@
+@use "../../sass/" as *;
+.nav-container {
+  background-color: #fff;
+  box-shadow: 0 2px 4px #9dacce99;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  min-height: 61px;
+  z-index: 10;
+}
+.nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 90%;
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $blue-button;
+  font-size: 0.9rem;
+  position: relative;
+  p {
+    cursor: pointer;
+  }
+  @include md {
+    width: 100%;
+    padding: 1rem 0.5rem;
+  }
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+    &--gosusl {
+      width: 126px;
+    }
+    p {
+      @include md {
+        display: none;
+      }
+    }
+    img {
+      cursor: pointer;
+    }
+  }
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    &--profile {
+      display: flex;
+      align-items: center;
+    }
+    &--name {
+      @include xl {
+        display: none;
+      }
+      img {
+        cursor: pointer;
+      }
+    }
+    &--search {
+      width: 24px;
+      height: 29px;
+      @include md {
+        display: none;
+      }
+    }
+    &--dot {
+      position: absolute;
+      top: 1.5rem;
+      right: -0.2rem;
+      background-color: rgb(238, 63, 88);
+      border-radius: 50%;
+      width: 12px;
+      height: 12px;
+      display: inline-block;
+      border: 2px solid #fff;
+    }
+    p {
+      @include xl {
+        display: none;
+      }
+    }
+    &--nsname {
+      position: relative;
+      background-color: rgb(155, 59, 229);
+      color: #fff;
+      width: 2.3rem;
+      height: 2.3rem;
+      display: flex;
+      font-weight: 400;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      margin-right: 0.5rem;
+      font-size: 1rem;
+    }
+    &--help {
+      @include md {
+        display: none;
+      }
+    }
+  }
+  &__menu {
+    border-radius: 1rem;
+    position: absolute;
+    top: 0.5rem;
+    right: 0rem;
+    background-color: #fff;
+    color: black;
+    box-shadow: rgba(13, 76, 211, 0.1) 0px 4px 20px 0px;
+    width: 320px;
+
+    @include md {
+      width: 100%;
+      height: 100vh;
+      top: 61px;
+      border-radius: 0;
+    }
+    &--header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgb(221, 218, 218);
+      padding: 1.05rem 1rem;
+      font-weight: 700;
+      @include md {
+        border-top: 1px solid rgb(221, 218, 218);
+      }
+      span {
+        @include md {
+          display: none;
+        }
+      }
+    }
+    &--active {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.5rem 1rem 1rem 1rem;
+      cursor: pointer;
+      &:hover {
+        background-color: $home-background;
+        color: $blue-button-hover;
+      }
+      span {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+      }
+      img {
+        width: 29px;
+        height: 29px;
+      }
+    }
+    &--logo {
+      background-color: rgb(238, 63, 88);
+      color: #fff;
+      padding: 0.2rem 0.5rem;
+      border-radius: 1rem;
+    }
+    &--item {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 0.8rem;
+      padding: 1rem;
+      cursor: pointer;
+      &:hover {
+        background-color: $home-background;
+        color: $blue-button-hover;
+      }
+      img {
+        width: 29px;
+        height: 29px;
+      }
+      &.hide {
+        display: none;
+        @include lg {
+          display: flex;
+        }
+      }
+    }
+  }
+}

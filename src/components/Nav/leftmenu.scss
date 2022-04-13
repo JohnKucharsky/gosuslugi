@@ -1,0 +1,83 @@
+@use "../../sass/" as *;
+.leftmenu {
+  &__overlay {
+    background-color: rgba(3, 19, 49, 0.85);
+    position: fixed;
+    top: 0;
+    left: 320px;
+    height: 100%;
+    right: 0;
+    z-index: 10;
+  }
+  &__container {
+    z-index: 10;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 320px;
+    height: 100%;
+    @include md {
+      width: 100%;
+    }
+    &--close {
+      position: absolute;
+      top: 32px;
+      display: block;
+      left: 354px;
+      width: 40px;
+      height: 40px;
+      @include xl {
+        display: none;
+      }
+    }
+    &--help {
+      color: $blue-button;
+      display: none;
+      align-items: center;
+      border-bottom: 1px solid rgb(248, 242, 242);
+      p {
+        padding: 1rem 1.3rem;
+        cursor: pointer;
+        &:hover {
+          color: $blue-button-hover;
+        }
+      }
+      img {
+        width: 24px;
+        height: 26px;
+      }
+      @include md {
+        display: flex;
+      }
+    }
+    &--logo {
+      width: 126px;
+    }
+    &--header {
+      margin-top: 1rem;
+      padding: 1rem;
+      display: none;
+      align-items: center;
+      gap: 1.5rem;
+      @include xl {
+        display: flex;
+      }
+    }
+    &--item {
+      padding: 1rem;
+      cursor: pointer;
+      &:hover {
+        background-color: $home-background;
+        color: $blue-button-hover;
+      }
+      img {
+        filter: invert(0.43) sepia(0.22) saturate(2.85) hue-rotate(171deg)
+          brightness(0.75) contrast(0.89);
+      }
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
+}

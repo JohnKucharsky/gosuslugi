@@ -1,0 +1,115 @@
+@use "../../sass/" as *;
+.header {
+  background-image: linear-gradient(258.56deg, #325de9 31.66%, #548cf6 80.67%);
+  position: relative;
+  top: 69px;
+
+  &__links {
+    display: flex;
+    max-width: 1274px;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0 auto;
+    @include xl {
+      display: none;
+    }
+    &--item {
+      font-size: 0.75rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.8rem;
+
+      padding: 1.5rem 1rem 1rem 1rem;
+      cursor: pointer;
+      &:hover {
+        color: rgba(255, 255, 255, 0.6);
+        img {
+          opacity: 0.6;
+        }
+      }
+
+      p {
+        text-align: center;
+      }
+    }
+  }
+  &__main {
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 3rem 0 5rem 0;
+    @include xl {
+      flex-direction: column;
+      align-items: flex-start;
+      max-width: 85%;
+      gap: 0;
+    }
+    &--logo {
+      img {
+        @include xl {
+          width: 70%;
+        }
+      }
+    }
+    &--search {
+      color: #fff;
+      opacity: 0.6;
+      padding: 0.8rem 0;
+      border-bottom: 3px white solid;
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+      @include md {
+        font-size: 1.2rem;
+      }
+    }
+    &--container {
+    }
+    &--items {
+      display: flex;
+      flex-wrap: wrap;
+      font-size: 1.2rem;
+      color: #fff;
+      font-weight: 400;
+      @include md {
+        font-size: 1rem;
+      }
+      p {
+        background-color: rgb(13, 76, 211);
+        padding: 6px 16px 8px 16px;
+        margin: 0 12px 8px 0;
+        border-radius: 4px 20px 20px 20px;
+      }
+    }
+  }
+  &__bottom {
+    box-shadow: 0 6px 16px #e6ebf5cc;
+    background-color: #fff;
+    margin: 0 auto;
+    position: absolute;
+    bottom: -4rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.2rem 1rem;
+    width: 766px;
+    left: 0;
+    right: 0;
+    @include xl {
+      width: 80%;
+    }
+    @include sm {
+      width: 100%;
+      bottom: -6rem;
+    }
+    &--container {
+      p:first-child {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+}
