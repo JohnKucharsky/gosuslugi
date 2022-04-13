@@ -1,10 +1,19 @@
 import "./nav.scss";
 import { IoIosArrowDown } from "react-icons/io";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 const Nav = ({ setShowLeftMenu }) => {
   const [showRightMenu, setShowRightMenu] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    document.addEventListener("mousedown", (e) => {
+      if (!ref.current?.contains(e.target)) {
+        setShowRightMenu(false);
+      }
+    });
+  }, []);
   return (
-    <div className="nav-container">
+    <div ref={ref} className="nav-container">
       <div className="nav">
         <div className="nav__left">
           <img
