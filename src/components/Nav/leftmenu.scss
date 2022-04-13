@@ -67,7 +67,7 @@
     &--item {
       padding: 1rem;
       cursor: pointer;
-      @include md {
+      @include sm {
         padding: 0.5rem 1rem;
       }
       &:hover {
